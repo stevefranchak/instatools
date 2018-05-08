@@ -1,0 +1,2 @@
+class InstatoolsException(Exception):
+    pass
