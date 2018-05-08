@@ -20,11 +20,11 @@ def verify_username_and_password_match(context):
     assert context.credentials.username == context.username
     assert context.credentials.password == context.password
 
-@then('be of the proper type and class')
+@then('it should be of the proper type and class')
 def verify_password_credentials_type(context):
     assert isinstance(context.credentials, PasswordCredentials)
     assert isinstance(context.credentials, Credentials)
 
-@then('not have a payload formatter')
+@then('it should not have a payload formatter')
 def verify_payload_formatter_does_not_exist(context):
     assert context.credentials.hasPayloadFormatter() is False

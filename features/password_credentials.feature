@@ -5,8 +5,8 @@ Feature: Encapsulation for username/password credentials (irrespective of API)
       and we have password "<password>"
     When we create an instance of the encapsulation
     Then it should have the provided username and password
-      and be of the proper type and class
-      and not have a payload formatter
+      and it should be of the proper type and class
+      and it should not have a payload formatter
 
     Examples: Valid Username/Password Pairs
         | username      | password       |
