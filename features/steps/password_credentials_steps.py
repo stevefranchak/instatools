@@ -39,7 +39,7 @@ def have_empty_password(context):
 def have_password(context, password):
     context.password = parse_parameterized_scenario_value(password)
 
-@when('we create an instance of the encapsulation')
+@when('we create an instance of the class')
 def create_credentials_instance(context):
     context.credentials = None
     context.exception = None

@@ -1,9 +1,11 @@
-Feature: Encapsulation for username/password credentials (irrespective of API)
+Feature: PasswordCredentials class
 
-  Scenario Outline: The encapsulation should accept a valid username and password
+  Credentials base class for username/password credentials (irrespective of API)
+
+  Scenario Outline: The class' constructor should accept a valid username and password
     Given we have username "<username>"
       and we have password "<password>"
-    When we create an instance of the encapsulation
+    When we create an instance of the class
     Then it should have the provided username and password
       and it should be of the proper type and class
       and it should not have a payload formatter
@@ -15,10 +17,10 @@ Feature: Encapsulation for username/password credentials (irrespective of API)
       | aaaaaaaaaaaa1 | aaaaaaaaaaaaa2 |
   
 
-  Scenario Outline: The encapsulation should throw an error when provided with an invalid username or password
+  Scenario Outline: The class' constructor should throw an error when provided with an invalid username or password
     Given we have username "<username>"
       and we have password "<password>"
-    When we create an instance of the encapsulation
+    When we create an instance of the class
     Then it should raise a "<exception>" exception
 
     Examples: Invalid Username/Password Pairs
