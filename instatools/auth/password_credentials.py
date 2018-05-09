@@ -7,9 +7,10 @@ class PasswordCredentials(credentials.Credentials):
     _password = None
 
     def __init__(self, username, password, payload_formatter=None):
+        super(PasswordCredentials, self).__init__(payload_formatter=payload_formatter)
+
         self.username = username
         self.password = password
-        self.payload_formatter = payload_formatter
 
     @property
     def username(self):

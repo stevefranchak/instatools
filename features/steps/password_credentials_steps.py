@@ -49,7 +49,6 @@ def create_credentials_instance(context):
     except Exception as exception:
         context.exception = exception
 
-
 @then('it should have the provided username and password')
 def verify_username_and_password_match(context):
     assert context.credentials.username == context.username

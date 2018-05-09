@@ -5,6 +5,9 @@ class Credentials(metaclass=abc.ABCMeta):
     
     _payload_formatter = None
 
+    def __init__(self, *args, **kwargs):
+        self.payload_formatter = kwargs.get('payload_formatter', None)
+
     @property
     def payload_formatter(self):
         return self._payload_formatter
